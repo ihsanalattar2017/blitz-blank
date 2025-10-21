@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blitz&Blank - Professionelle Reinigungsdienstleistungen in Büdingen">
+    <title>Blitz&Blank - Reinigungsfirma Büdingen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Blitz&Blank</div>
+            <ul class="nav-links">
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#" id="admin-link" class="admin-link">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 id="welcome-title">Willkommen bei Blitz&Blank</h1>
+            <p class="tagline" id="welcome-tagline">Ihrem zuverlässigen Partner für Qualität und Service</p>
+            <p class="hero-text" id="welcome-text">
+                Wir kümmern uns um gründliche Reinigung, Entsorgung und Pflege – von alten Gebäuden bis zu Dachflächen. 
+                Saubere Arbeit, faire Preise und zufriedene Kunden stehen bei uns an erster Stelle.
+            </p>
+            <a href="#contact" class="cta-button">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Unsere Leistungen</h2>
+            <div class="services-grid" id="services-grid">
+                <!-- Services will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontaktieren Sie uns</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Blitz&Blank</h3>
+                    <p><strong>Inhaber:</strong> <span id="owner-name">Ihsan Alattar</span></p>
+                    <p><strong>Standort:</strong> <span id="location">Büdingen</span></p>
+                    
+                    <div class="contact-details">
+                        <h4>Telefon</h4>
+                        <ul id="phone-list">
+                            <li><a href="tel:+491578151841">+49 157 81518416</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-details">
+                        <h4>E-Mail</h4>
+                        <p><a href="mailto:ihsanalattar373@gmail.com" id="email-link">ihsanalattar373@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xyzabc123" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Blitz&Blank. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Modal -->
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Admin-Bereich</h2>
+            
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="edit">Bearbeiten</button>
+            </div>
+
+            <!-- Login Tab -->
+            <div id="login-tab" class="tab-content active">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Benutzername</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Passwort</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="submit-button">Anmelden</button>
+                    <div id="login-message"></div>
+                </form>
+            </div>
+
+            <!-- Edit Tab -->
+            <div id="edit-tab" class="tab-content">
+                <div id="edit-content" style="display: none;">
+                    <h3>Firmeninformationen</h3>
+                    <form id="company-form">
+                        <div class="form-group">
+                            <label for="edit-owner">Inhaber</label>
+                            <input type="text" id="edit-owner" name="owner_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-location">Standort</label>
+                            <input type="text" id="edit-location" name="location">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-email">E-Mail</label>
+                            <input type="email" id="edit-email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-phone1">Telefon 1</label>
+                            <input type="tel" id="edit-phone1" name="phone1">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-phone2">Telefon 2</label>
+                            <input type="tel" id="edit-phone2" name="phone2">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-phone3">Telefon 3</label>
+                            <input type="tel" id="edit-phone3" name="phone3">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-welcome-title">Willkommens-Titel</label>
+                            <input type="text" id="edit-welcome-title" name="welcome_title">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-welcome-tagline">Willkommens-Tagline</label>
+                            <input type="text" id="edit-welcome-tagline" name="welcome_tagline">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-welcome-text">Willkommens-Text</label>
+                            <textarea id="edit-welcome-text" name="welcome_text" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Speichern</button>
+                        <div id="company-message"></div>
+                    </form>
+
+                    <hr style="margin: 2rem 0;">
+
+                    <h3>Leistungen bearbeiten</h3>
+                    <div id="services-edit-list"></div>
+                    <button id="add-service-btn" class="submit-button" style="margin-top: 1rem;">Neue Leistung hinzufügen</button>
+                </div>
+                <div id="not-logged-in" style="text-align: center; padding: 2rem;">
+                    <p>Bitte melden Sie sich zuerst an.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
