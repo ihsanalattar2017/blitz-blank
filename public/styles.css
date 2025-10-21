@@ -40,8 +40,8 @@ body {
    Navigation
    =========================== */
 .navbar {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--text-color);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -54,22 +54,19 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-.logo {
+.nav-brand {
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     letter-spacing: 1px;
-}
-
-.nav-links {
+}av-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
 .nav-links a {
-    color: var(--white);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
