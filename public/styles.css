@@ -157,6 +157,27 @@ body {
     border-color: #ff6b35;
 }
 
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid #25d366;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eaa51;
+    color: #ffffff;
+    border-color: #1eaa51;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
 .cta-button:hover {
     background-color: transparent;
     color: var(--secondary-color);
